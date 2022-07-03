@@ -54,7 +54,7 @@ public final class Detail200020016UserActivity extends AppCompatActivity {
         }
 
         binding.etPassword.setText(user.getPassword());
-        if (user.getThumbnail() != "") {
+        if (!user.getThumbnail().equals("")) {
             binding.civThumbnail.setImageURI(Uri.parse(user.getThumbnail()));
         } else {
             binding.civThumbnail.setImageResource(R.drawable.user);
